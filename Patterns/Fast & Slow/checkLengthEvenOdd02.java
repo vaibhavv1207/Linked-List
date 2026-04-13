@@ -45,7 +45,6 @@ public class checkLengthEvenOdd02 {
                 System.out.println("List is Empty: ");
                 return;
             }
-            Node slow = head;
             Node fast = head;
             while (fast != null && fast.next != null){
                 fast = fast.next.next;
