@@ -1,3 +1,30 @@
+// 🔵 Find Middle of Linked List (Fast & Slow Pointer)
+//
+// 🧠 Logic:
+// - Use two pointers:
+//   slow → moves 1 step
+//   fast → moves 2 steps
+// - When fast reaches end → slow will be at middle
+//
+// 📌 Why it works:
+// - Fast travels double speed of slow
+// - When fast finishes the list,
+//   slow has covered half → reaches middle
+//
+// ⚠️ Important:
+// - If list length is EVEN → this returns SECOND middle
+//   Example: 10 → 20 → 30 → 40 → returns 30
+//
+// 🔁 To get FIRST middle (even case):
+// - Start fast from head.next instead of head
+//
+// ⏱ Time Complexity: O(n)
+// 💾 Space Complexity: O(1)
+//
+// 🎯 Interview Tip:
+// - Always clarify:
+//   "Do you want first middle or second middle?"
+// - Default approach returns SECOND middle
 public class middleLinkedList01 {
     static class LinkedList{
         Node head;
