@@ -1,5 +1,32 @@
-
-
+// 🔵 Remove Nth Node from End (One-Pass | Fast & Slow Pointer)
+//
+// 🧠 Logic:
+// 1. Initialize two pointers: slow and fast at head
+// 2. Move fast pointer n steps ahead
+// 3. If fast becomes NULL → delete head node
+// 4. Move both slow and fast one step at a time
+// 5. Stop when fast.next == NULL
+// 6. slow will be at node BEFORE the target
+// 7. Delete node using: slow.next = slow.next.next
+//
+// 📌 Why it works:
+// - Maintains a gap of n nodes between fast and slow
+// - When fast reaches end, slow is just before target node
+//
+// ⚠️ Edge Cases:
+// - n == length → delete head
+// - n > length → invalid input
+// - Single node → result becomes NULL
+//
+// ⏱ Time Complexity: O(n)
+// 💾 Space Complexity: O(1)
+//
+// 🎯 Interview Tip:
+// - This is the optimal one-pass solution
+// - Preferred over two-pass (length-based) approach
+//
+// 🧠 Key Idea:
+// "Maintain a gap of n nodes between two pointers"
 public class removeNthNode09 {
     static class LinkedList{
         Node head;
