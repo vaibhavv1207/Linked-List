@@ -36,10 +36,9 @@ public class middleLinkedList01 {
                 this.next = null;
             }
         }
-        // Print Linked List
         void printList(){
-            if(head == null){
-                System.out.println("List is Empty: ");
+            if (head == null){
+                System.out.print("List is Empty: ");
                 return;
             }
             Node temp = head;
@@ -47,14 +46,13 @@ public class middleLinkedList01 {
                 System.out.print(temp.data+" -> ");
                 temp = temp.next;
             }
-            System.out.println("NULL");
+            System.out.print("NULL\n");
         }
         int middleElement(){
-            if (head == null){
-                System.out.print("List is Empty: ");
+            if(head == null){
                 return -1;
+
             }
-            // Find middle node (returns SECOND middle for even length)
             Node slow = head;
             Node fast = head;
             while (fast != null && fast.next != null){
@@ -63,20 +61,21 @@ public class middleLinkedList01 {
             }
             return slow.data;
         }
-    }   
-    public static void main(String args[]){
+    }
+    public static void main(String[] args) {
         LinkedList list = new LinkedList();
         LinkedList.Node n1 = new LinkedList.Node(10);
         LinkedList.Node n2 = new LinkedList.Node(20);
         LinkedList.Node n3 = new LinkedList.Node(30);
         LinkedList.Node n4 = new LinkedList.Node(40);
-        // Creating linked list: 10 -> 20 -> 30 -> 40
+        LinkedList.Node n5 = new LinkedList.Node(50);
+
         list.head = n1;
         n1.next = n2;
         n2.next = n3;
         n3.next = n4;
-
+        n4.next = n5;
         list.printList();
-        System.out.println("Middle Element is: "+list.middleElement());
+        System.out.print("Middle element is: "+list.middleElement());
     }
 }
