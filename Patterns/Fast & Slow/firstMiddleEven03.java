@@ -48,20 +48,19 @@ public class firstMiddleEven03 {
             }
             System.out.println("NULL");
         }
-        void checkLength(){
+        int firstMiddle(){
             if (head == null){
-                System.out.println("List is Empty: ");
-                return;
+                return -1;
             }
             Node slow = head;
             Node fast = head.next;
             while (fast != null && fast.next != null){
-                fast = fast.next.next;
                 slow = slow.next;
+                fast = fast.next.next;
             }
-            System.out.println(slow.data);
-            
+            return slow.data;
         }
+        
     }   
     public static void main(String args[]){
         LinkedList list = new LinkedList();
@@ -76,6 +75,6 @@ public class firstMiddleEven03 {
         n3.next = n4;
 
         list.printList();
-        list.checkLength();
+        System.out.print("First Middle Element is: "+list.firstMiddle());
     }
 }
