@@ -15,6 +15,19 @@ public class SinglyLinkedListInsertion {
             head = newNode;
 
         }
+        void insertAtEnd(int data){
+            Node newNode = new Node(data);
+            if (head == null){
+                head = newNode;
+                head.next = null;
+            }
+            Node temp = head;
+            while (temp.next != null){
+                temp = temp.next;
+            }
+            temp.next = newNode;
+            newNode.next = null;
+        }
         void printList(){
             if (head == null){
                 System.out.println("List is Empty: ");
@@ -41,6 +54,8 @@ public class SinglyLinkedListInsertion {
         n3.next = n4;
         n4.next = n5;
         list.insertAtBegin(5);
+        list.insertAtEnd(55);
         list.printList();
+
     }
 }
