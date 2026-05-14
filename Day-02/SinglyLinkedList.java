@@ -1,7 +1,6 @@
 public class SinglyLinkedList{
     static class LinkedList{
         Node head;
-
         static class Node{
             int data;
             Node next;
@@ -10,9 +9,10 @@ public class SinglyLinkedList{
                 this.next = null;
             }
         }
+
         void printList(){
             if (head == null){
-                System.out.println("List is Empty: ");
+                System.out.println("List is empty: ");
                 return;
             }
             Node temp = head;
@@ -29,13 +29,10 @@ public class SinglyLinkedList{
         LinkedList.Node n2 = new LinkedList.Node(20);
         LinkedList.Node n3 = new LinkedList.Node(30);
         LinkedList.Node n4 = new LinkedList.Node(40);
-        LinkedList.Node n5 = new LinkedList.Node(50);
         list.head = n1;
         n1.next = n2;
         n2.next = n3;
         n3.next = n4;
-        n4.next = n5;
-
         list.printList();
     }
 }
